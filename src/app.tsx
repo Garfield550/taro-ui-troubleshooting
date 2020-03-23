@@ -1,9 +1,9 @@
-import Taro, { Component, Config } from '@tarojs/taro'
+import Taro from '@tarojs/taro'
 import Index from './pages/index'
 import './app.scss'
 
-class App extends Component {
-  config: Config = {
+class App extends Taro.Component {
+  public static config: Taro.Config = {
     pages: [
       'pages/index/index'
     ],
@@ -15,7 +15,7 @@ class App extends Component {
     }
   }
 
-  render() {
+  public render(): JSX.Element {
     return (
       <Index />
     )
