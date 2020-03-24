@@ -15,6 +15,7 @@ export default class Index extends Taro.Component {
         <AtForm>
           <AtInput name='input' placeholder='Input' onChange={() => {}} />
           <AtSwitch title='Switch' />
+          <AtSwitch className='custom-switch' title='仅修改这个 Switch 大小' />
         </AtForm>
       </View>
     )

@@ -2,3 +2,21 @@ $at-switch-title-size: 32px;
 $at-switch-title-color: red;
 
 @import "~taro-ui/dist/style/components/switch.scss";
+
+.custom-switch {
+  $custom-switch-width: 72px;
+  $custom-switch-height: 32px;
+  // 参考 https://juejin.im/post/5b051b1c6fb9a07aca7a8676
+  .wx-switch-input {
+    width: $custom-switch-width !important;
+    height: $custom-switch-height !important;
+    &::before {
+      width: $custom-switch-width - 1 !important;
+      height: $custom-switch-height - 3 !important;
+    }
+    &::after {
+      width: $custom-switch-height - 3 !important;
+      height: $custom-switch-height - 3 !important;
+    }
+  }
+}
