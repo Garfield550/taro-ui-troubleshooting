@@ -1,5 +1,6 @@
+import { AtButton } from 'taro-ui'
+import { Text, View } from '@tarojs/components'
 import Taro from '@tarojs/taro'
-import { View, Text } from '@tarojs/components'
 import './index.scss'
 
 export default class Index extends Taro.Component {
@@ -11,6 +12,8 @@ export default class Index extends Taro.Component {
     return (
       <View className='index'>
         <Text>Hello world!</Text>
+        <AtButton>按钮文案</AtButton>
+        <AtButton type='primary'>按钮文案</AtButton>
       </View>
     )
   }
