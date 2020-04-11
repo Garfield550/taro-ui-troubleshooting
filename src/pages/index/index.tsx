@@ -47,6 +47,9 @@ export default class Index extends Taro.Component {
           <View>Hello world!</View>
           <View>Hello world!</View>
           <View>Hello world!</View>
+          <View>Hello world!</View>
+          <View>Hello world!</View>
+          <View>Hello world!</View>
           <AtSwipeAction autoClose options={[
             {
               text: '取消',
@@ -67,6 +70,9 @@ export default class Index extends Taro.Component {
           >
             <View className='normal'>点击按钮自动关闭</View>
           </AtSwipeAction>
+          <View>Hello world!</View>
+          <View>Hello world!</View>
+          <View>Hello world!</View>
           <View>Hello world!</View>
           <View>Hello world!</View>
           <View>Hello world!</View>
