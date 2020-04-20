@@ -6,5 +6,16 @@ module.exports = {
       framework: 'react',
       ts: true
     }]
+  ],
+  plugins: [
+    [
+      'import',
+      {
+        libraryName: 'taro-ui',
+        customName: name => {
+          return `taro-ui/lib/components/${name.replace('at-', '')}`
+        }
+      }
+    ]
   ]
 }
