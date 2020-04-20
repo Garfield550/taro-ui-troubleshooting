@@ -1,30 +1,21 @@
 const config = {
   projectName: 'taro-ui-troubleshooting',
-  date: '2020-3-2',
+  date: '2020-4-20',
   designWidth: 750,
   deviceRatio: {
-    '640': 2.34 / 2,
-    '750': 1,
-    '828': 1.81 / 2
+    640: 2.34 / 2,
+    750: 1,
+    828: 1.81 / 2
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
-  babel: {
-    sourceMap: true,
-    presets: [
-      ['env', {
-        modules: false
-      }]
-    ],
-    plugins: [
-      'transform-decorators-legacy',
-      'transform-class-properties',
-      'transform-object-rest-spread'
-    ]
-  },
   plugins: [],
-  defineConstants: {
+  defineConstants: {},
+  copy: {
+    patterns: [],
+    options: {}
   },
+  framework: 'react',
   mini: {
     postcss: {
       pxtransform: {
@@ -34,7 +25,7 @@ const config = {
       url: {
         enable: true,
         config: {
-          limit: 10240 // 设定转换尺寸上限
+          limit: 1024 // 设定转换尺寸上限
         }
       },
       cssModules: {
@@ -52,13 +43,7 @@ const config = {
     postcss: {
       autoprefixer: {
         enable: true,
-        config: {
-          browsers: [
-            'last 3 versions',
-            'Android >= 4.1',
-            'ios >= 8'
-          ]
-        }
+        config: {}
       },
       cssModules: {
         enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true

@@ -1,25 +1,11 @@
-import Taro from '@tarojs/taro'
-import Index from './pages/index'
+import React from 'react'
 import './app.scss'
 
-class App extends Taro.Component {
-  public config: Taro.Config = {
-    pages: [
-      'pages/index/index'
-    ],
-    window: {
-      backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black'
-    }
-  }
-
-  public render(): JSX.Element {
-    return (
-      <Index />
-    )
+class App extends React.Component {
+  // this.props.children 是将要会渲染的页面
+  public render(): React.ReactNode {
+    return this.props.children
   }
 }
 
-Taro.render(<App />, document.getElementById('app'))
+export default App

@@ -1,12 +1,8 @@
-import Taro from '@tarojs/taro'
+import React from 'react'
 import { View, Text } from '@tarojs/components'
 import './index.scss'
 
-export default class Index extends Taro.Component {
-  public static config: Taro.Config = {
-    navigationBarTitleText: '首页'
-  }
-
+export default class Index extends React.Component {
   public render(): JSX.Element {
     return (
       <View className='index'>
